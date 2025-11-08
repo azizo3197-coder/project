@@ -65,7 +65,7 @@
     }
 
     button {
-      background-color: #b72c2c;
+      background-color: rgb(144, 16, 16);
       color: white;
       border: none;
       padding: 10px 20px;
@@ -95,11 +95,90 @@
       padding: 15px 0;
       font-size: 0.9rem;
     }
+     .bar {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.bar span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: rgb(193, 9, 9);
+  margin: 6px 0;
+  border-radius: 2px;
+}
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.menu summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.menu[open] .menu-links {
+  display: block;
+}
+
+.menu-links {
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 75px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.menu-links button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  background-color: rgba(144, 16, 16, 0);
+  color: rgb(190, 0, 0);
+  border: none;
+  padding: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Cinzel", serif;
+  transition: 0.3s;
+}
+
+.menu-links button:hover {
+  background-color: #dbc20470;
+  color: #00ff5500;
+
+}
+.menu-links a{text-decoration: none;} 
   </style>
 </head>
 <body>
 
   <header>
+    <details class="menu">
+  <summary>
+    <div class="bar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </summary>
+
+  <div class="menu-links">
+    <a href="pasta.html"><button><strong>Pasta</strong></button></a>
+    <hr>
+    <a href="desserts.html"><button><strong>Desserts</strong></button></a><hr>
+    <a href="appitezer.html"><button><strong>Appetizers</strong></button></a><hr>
+    <a href="about.html"><button><strong>Contact</strong></button></a>
+  </div>
+</details>
      <div class="logo-container">
   <a href="proto.html"blank>   
       <img src="logo.png" alt="La Bella Luna Logo"></a> 
